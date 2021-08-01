@@ -1,14 +1,14 @@
-function arrayGetLastProperty(this: any[]): any {
+function arrayGetLastProperty<T>(this: T[]): T {
     return this[this.length - 1];
 }
 
-function arraySetLastProperty(this: any[], value: any): any {
-    this[this.length - 1] = value; 
+function arraySetLastProperty<T>(this: T[], value: T): T {
+    return this[this.length - 1] = value; 
 }
 
 declare global {
     interface Array<T> {
-        last: any;
+        last: T;
     }
 }
 

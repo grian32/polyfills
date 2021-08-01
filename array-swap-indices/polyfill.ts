@@ -1,4 +1,4 @@
-function arraySwapIndices(this: any[], x: number, y: number): boolean {
+function arraySwapIndices<T>(this: T[], x: number, y: number): boolean {
     try {
         // assign elem values to variables
         let elemOne = this[x];

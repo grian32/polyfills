@@ -1,4 +1,4 @@
-function arrayAllSatisfy(this: any[], predicate: (x: any) => boolean): boolean {
+function arrayAllSatisfy<T>(this: T[], predicate: (x: T) => boolean): boolean {
     for (let i of this) {
         // if the predicate is false then stop and return false
         if (!predicate(i)) {
@@ -12,7 +12,7 @@ function arrayAllSatisfy(this: any[], predicate: (x: any) => boolean): boolean {
 
 declare global {
     interface Array<T> {
-        allSatisfy(this: any[], predicate: (x: any) => boolean): boolean;
+        allSatisfy(this: T[], predicate: (x: T) => boolean): boolean;
     }
 }
 
