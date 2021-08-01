@@ -1,6 +1,6 @@
 function arraySwapIndices(this: any[], x: number, y: number): boolean {
     try {
-        // assign elem values to variables;
+        // assign elem values to variables
         let elemOne = this[x];
         let elemTwo = this[y];
 
@@ -25,11 +25,15 @@ declare global {
     }
 }
 
-Object.defineProperty(Array.prototype, "swapAt", {
-    value: arraySwapIndices,
-    configurable: true,
-    enumerable: false,
-    writable: true,
-})
+let arraysArray = [Array, Uint8Array, Uint16Array, Uint32Array, Int8Array, Int16Array, Int32Array, BigInt64Array];
+
+for (let C of arraysArray) {
+    Object.defineProperty(C.prototype, "swapAt", {
+        value: arraySwapIndices,
+        configurable: true,
+        enumerable: false,
+        writable: true,
+    });
+}
 
 export {};
