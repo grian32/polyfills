@@ -27,7 +27,7 @@ declare global {
 
 Object.defineProperty(Array.prototype, "swapAt", {
     value: arraySwapIndices,
-    configurable: false,
+    configurable: true,
     enumerable: false,
     writable: true,
 })
