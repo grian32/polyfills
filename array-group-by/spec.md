@@ -17,3 +17,7 @@ array.groupBy(i => {
 
 // =>  { odd: [1, 3, 5], even: [2, 4] }
 ```
+
+## Credit
+
+https://github.com/tc39/proposal-array-grouping
